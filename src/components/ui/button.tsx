@@ -15,11 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md",
         ghost: "hover:bg-accent hover:text-accent-foreground rounded-md",
         link: "text-primary underline-offset-4 hover:underline",
-        // Custom premium variants
-        hero: "relative bg-gradient-to-r from-primary to-[hsl(230,80%,50%)] text-primary-foreground shadow-[0_0_40px_hsla(217,91%,60%,0.4)] hover:shadow-[0_0_60px_hsla(217,91%,60%,0.6)] hover:scale-105 active:scale-100 rounded-full",
-        heroSecondary: "relative bg-gradient-to-r from-secondary to-[hsl(25,85%,50%)] text-secondary-foreground shadow-[0_0_30px_hsla(16,72%,58%,0.3)] hover:shadow-[0_0_50px_hsla(16,72%,58%,0.5)] hover:scale-105 active:scale-100 rounded-full",
-        glass: "glass-card text-foreground hover:bg-[hsla(222,40%,20%,0.8)] border-[hsla(0,0%,100%,0.1)] rounded-xl",
-        outlineGlow: "border-2 border-primary/50 bg-transparent text-primary hover:border-primary hover:shadow-[0_0_30px_hsla(217,91%,60%,0.3)] rounded-full",
+        // Clean minimalist variants
+        hero: "bg-foreground text-background hover:bg-foreground/90 hover:shadow-[0_8px_30px_hsla(199,89%,48%,0.25)] hover:scale-[1.02] active:scale-100 rounded-full",
+        outlineGlow: "border border-foreground/20 bg-transparent text-foreground hover:border-primary hover:text-primary hover:shadow-[0_8px_30px_hsla(199,89%,48%,0.15)] rounded-full",
+        glass: "bg-card/80 backdrop-blur-sm text-foreground hover:bg-card border border-border rounded-xl hover:shadow-[0_8px_30px_hsla(199,89%,48%,0.1)]",
+        primary: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_8px_30px_hsla(199,89%,48%,0.3)] rounded-full",
       },
       size: {
         default: "h-10 px-4 py-2",

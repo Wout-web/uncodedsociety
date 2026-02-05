@@ -2,22 +2,21 @@ import { motion } from 'framer-motion';
 
 const MarqueeSection = () => {
   const keywords = [
-    'HTML', 'CSS', 'Python', 'Java', 'Free Education', 'Community', 
-    'Diversity', 'Inclusion', 'Coding', 'Web Development', 'Programming',
-    'Empowerment', 'Future Builders', 'Tech For All',
+    'HTML', 'CSS', 'Python', 'Java', 'Gratis Onderwijs', 'Community', 
+    'Programmeren', 'Webontwikkeling', 'Toekomst', 'Inclusie',
   ];
 
   return (
-    <section className="py-12 overflow-hidden border-y border-border/30">
+    <section className="py-8 overflow-hidden border-y border-border/50">
       <div className="marquee">
         <div className="marquee-content">
           {[...keywords, ...keywords].map((keyword, index) => (
             <span
               key={index}
-              className="mx-8 text-2xl md:text-3xl font-display font-bold text-muted-foreground/30 whitespace-nowrap"
+              className="mx-8 text-xl md:text-2xl font-display font-semibold text-muted-foreground/20 whitespace-nowrap"
             >
               {keyword}
-              <span className="mx-8 text-primary">•</span>
+              <span className="mx-8 text-primary/30">•</span>
             </span>
           ))}
         </div>

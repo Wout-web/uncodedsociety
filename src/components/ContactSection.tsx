@@ -11,38 +11,33 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder for form submission
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden" ref={ref}>
-      {/* Diagonal background */}
-      <div className="absolute inset-0 diagonal-cut-reverse bg-gradient-to-br from-card to-muted/50" />
-
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section id="contact" className="relative py-24 overflow-hidden" ref={ref}>
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-start max-w-5xl mx-auto">
           {/* Left - Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-px w-12 bg-secondary" />
-              <span className="text-secondary font-semibold tracking-wider uppercase text-sm">
-                Get In Touch
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="h-px w-8 bg-primary" />
+              <span className="text-primary font-medium tracking-wider uppercase text-sm">
+                Contact
               </span>
             </div>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
-              Let's
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-8">
+              Neem
               <br />
-              <span className="text-gradient-primary">Connect</span>
+              <span className="italic text-primary">Contact Op</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-md">
-              Have questions about our programs? Want to volunteer or partner with us? 
-              We'd love to hear from you.
+              Heb je vragen over onze programma's? Wil je vrijwilliger worden of samenwerken? 
+              We horen graag van je.
             </p>
 
             {/* Contact Methods */}
@@ -50,14 +45,14 @@ const ContactSection = () => {
               <motion.a
                 href="mailto:info@uncodesociety.org"
                 className="flex items-center gap-4 group"
-                whileHover={{ x: 10 }}
+                whileHover={{ x: 8 }}
               >
-                <div className="w-12 h-12 rounded-2xl glass-card flex items-center justify-center group-hover:border-primary/50 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email us</p>
-                  <p className="text-foreground font-medium">{/* Email to be filled */}info@uncodesociety.org</p>
+                  <p className="text-sm text-muted-foreground">E-mail</p>
+                  <p className="text-foreground font-medium">info@uncodesociety.org</p>
                 </div>
               </motion.a>
 
@@ -66,27 +61,27 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
-                whileHover={{ x: 10 }}
+                whileHover={{ x: 8 }}
               >
-                <div className="w-12 h-12 rounded-2xl glass-card flex items-center justify-center group-hover:border-secondary/50 transition-colors">
-                  <Instagram className="w-5 h-5 text-secondary" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Instagram className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Follow us</p>
+                  <p className="text-sm text-muted-foreground">Instagram</p>
                   <p className="text-foreground font-medium">@uncodesociety</p>
                 </div>
               </motion.a>
 
               <motion.div
                 className="flex items-center gap-4"
-                whileHover={{ x: 10 }}
+                whileHover={{ x: 8 }}
               >
-                <div className="w-12 h-12 rounded-2xl glass-card flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-accent" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Based in</p>
-                  <p className="text-foreground font-medium">{/* Location to be filled */}Your City</p>
+                  <p className="text-sm text-muted-foreground">Locatie</p>
+                  <p className="text-foreground font-medium">Nederland</p>
                 </div>
               </motion.div>
             </div>
@@ -94,50 +89,50 @@ const ContactSection = () => {
 
           {/* Right - Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8 lg:p-10">
-              <h3 className="font-display text-2xl font-bold mb-6">Send us a message</h3>
+            <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 border border-border">
+              <h3 className="font-display text-xl font-bold mb-6">Stuur ons een bericht</h3>
               
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">
-                    Your Name
+                    Naam
                   </label>
                   <input
                     type="text"
                     id="name"
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/50"
-                    placeholder="John Doe"
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/50"
+                    placeholder="Je naam"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">
-                    Email Address
+                    E-mailadres
                   </label>
                   <input
                     type="email"
                     id="email"
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/50"
-                    placeholder="john@example.com"
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/50"
+                    placeholder="je@email.com"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">
-                    Message
+                    Bericht
                   </label>
                   <textarea
                     id="message"
                     required
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/50 resize-none"
-                    placeholder="How can we help you?"
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/50 resize-none"
+                    placeholder="Hoe kunnen we je helpen?"
                   />
                 </div>
 
@@ -151,12 +146,12 @@ const ContactSection = () => {
                   {submitted ? (
                     <>
                       <CheckCircle className="w-5 h-5" />
-                      Message Sent!
+                      Bericht Verzonden!
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Send Message
+                      Verstuur Bericht
                     </>
                   )}
                 </Button>
