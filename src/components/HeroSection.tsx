@@ -71,7 +71,6 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
               <Button
                 variant="hero"
                 size="xl"
-                rounded="full"
                 onClick={onSignUpClick}
                 className="group"
               >
@@ -81,7 +80,6 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
               <Button
                 variant="outlineGlow"
                 size="xl"
-                rounded="full"
                 asChild
               >
                 <a href="#offerings">Explore Courses</a>

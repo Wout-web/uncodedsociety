@@ -106,7 +106,6 @@ const Navbar = ({ onSignUpClick }: NavbarProps) => {
               <Button
                 variant="hero"
                 size="xl"
-                rounded="full"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   onSignUpClick();
