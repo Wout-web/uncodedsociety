@@ -132,14 +132,14 @@ const SignUpModal = ({ isOpen, onClose, selectedLesson }: SignUpModalProps) => {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-8"
                 >
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ type: 'spring', delay: 0.1 }}
-                    className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-500/20 flex items-center justify-center"
-                  >
-                    <CheckCircle className="w-10 h-10 text-green-500" />
-                  </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: 'spring', delay: 0.1 }}
+                  className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/20 flex items-center justify-center"
+                >
+                  <CheckCircle className="w-10 h-10 text-primary" />
+                </motion.div>
                   <h3 className="font-display text-2xl font-bold mb-2">You're Signed Up!</h3>
                   <p className="text-muted-foreground">
                     We've received your registration. Check your email for confirmation details.
