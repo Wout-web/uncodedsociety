@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import OfferingsSection from '@/components/OfferingsSection';
 import WhySection from '@/components/WhySection';
-import MarqueeSection from '@/components/MarqueeSection';
 import LessonsSection from '@/components/LessonsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -26,10 +25,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar onSignUpClick={handleSignUpClick} />
       <HeroSection onSignUpClick={handleSignUpClick} />
-      <MarqueeSection />
       <AboutSection />
       <OfferingsSection />
       <WhySection />
