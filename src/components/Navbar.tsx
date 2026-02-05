@@ -64,7 +64,6 @@ const Navbar = ({ onSignUpClick }: NavbarProps) => {
             <Button
               variant="hero"
               size="lg"
-              rounded="full"
               onClick={onSignUpClick}
             >
               Sign Up Free
