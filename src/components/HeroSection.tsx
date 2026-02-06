@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HeroSectionProps {
@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden">
       {/* Subtle floating shapes */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
@@ -23,25 +23,12 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
 
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 mb-8"
-          >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">
-              100% Gratis Programmeer Onderwijs
-            </span>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6"
           >
             <span className="text-foreground">Barrières </span>
             <span className="italic text-primary">Doorbreken</span>
@@ -57,7 +44,7 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
             Uncode Society biedt gratis programmeeronderwijs aan ondervertegenwoordigde gemeenschappen. 
             Geen ervaring nodig—breng alleen je nieuwsgierigheid mee.
@@ -76,7 +63,7 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
               onClick={onSignUpClick}
               className="group"
             >
-              Start Met Leren
+              Gratis Aanmelden
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -93,19 +80,19 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex gap-12 mt-16 pt-8 border-t border-border/50"
+            className="flex gap-8 sm:gap-12 mt-12 sm:mt-16 pt-8 border-t border-border/50"
           >
             <div>
-              <p className="text-4xl font-display font-bold text-foreground">500+</p>
-              <p className="text-sm text-muted-foreground">Studenten</p>
+              <p className="text-3xl sm:text-4xl font-display font-bold text-foreground">500+</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Studenten</p>
             </div>
             <div>
-              <p className="text-4xl font-display font-bold text-foreground">3</p>
-              <p className="text-sm text-muted-foreground">Talen</p>
+              <p className="text-3xl sm:text-4xl font-display font-bold text-foreground">3</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Talen</p>
             </div>
             <div>
-              <p className="text-4xl font-display font-bold text-primary">Gratis</p>
-              <p className="text-sm text-muted-foreground">Altijd & Voor Altijd</p>
+              <p className="text-3xl sm:text-4xl font-display font-bold text-primary">Gratis</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Altijd & Voor Altijd</p>
             </div>
           </motion.div>
         </div>

@@ -27,23 +27,23 @@ const Navbar = ({ onSignUpClick }: NavbarProps) => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-background/80 backdrop-blur-md py-4 shadow-sm'
-            : 'bg-transparent py-6'
+            ? 'bg-background/80 backdrop-blur-md py-3 shadow-sm'
+            : 'bg-transparent py-4 sm:py-6'
         }`}
       >
-        <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
           {/* Text Logo */}
           <a href="#" className="flex items-center gap-1">
-            <span className="font-display text-2xl md:text-3xl font-bold text-foreground">
+            <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
               Uncode
             </span>
-            <span className="font-display text-2xl md:text-3xl font-bold text-primary">
+            <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">
               Society
             </span>
           </a>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-4">
             <Button
               variant="hero"
               size="lg"
@@ -55,7 +55,7 @@ const Navbar = ({ onSignUpClick }: NavbarProps) => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="sm:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,7 +70,7 @@ const Navbar = ({ onSignUpClick }: NavbarProps) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-md pt-24 md:hidden"
+            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-md pt-24 sm:hidden"
           >
             <nav className="container mx-auto px-6 flex flex-col gap-6 items-center">
               <Button

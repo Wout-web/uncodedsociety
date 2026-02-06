@@ -3,7 +3,6 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import OfferingsSection from '@/components/OfferingsSection';
-import WhySection from '@/components/WhySection';
 import LessonsSection from '@/components/LessonsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -30,15 +29,15 @@ const Index = () => {
       <HeroSection onSignUpClick={handleSignUpClick} />
       <AboutSection />
       <OfferingsSection />
-      <WhySection />
       <LessonsSection onSignUpClick={handleLessonSignUp} />
       <ContactSection />
       <Footer />
       
       <SignUpModal
         isOpen={isSignUpModalOpen}
-        onClose={() => setIsSignUpModalOpen(false)}
+        onClose={() => { setIsSignUpModalOpen(false); setSelectedLesson(null); }}
         selectedLesson={selectedLesson}
+        onSelectLesson={(lesson) => setSelectedLesson(lesson || null)}
       />
     </div>
   );
