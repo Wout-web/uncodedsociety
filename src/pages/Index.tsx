@@ -35,9 +35,9 @@ const Index = () => {
       
       <SignUpModal
         isOpen={isSignUpModalOpen}
-        onClose={() => setIsSignUpModalOpen(false)}
+        onClose={() => { setIsSignUpModalOpen(false); setSelectedLesson(null); }}
         selectedLesson={selectedLesson}
-        onSelectLesson={setSelectedLesson}
+        onSelectLesson={(lesson) => setSelectedLesson(lesson || null)}
       />
     </div>
   );
