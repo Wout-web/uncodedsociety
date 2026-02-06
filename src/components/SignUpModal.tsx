@@ -202,7 +202,7 @@ const SignUpModal = ({ isOpen, onClose, selectedLesson, onSelectLesson }: SignUp
                 <>
                   <div className="mb-6">
                     <button
-                      onClick={() => onSelectLesson(null as any)}
+                      onClick={() => { handleClose(); }}
                       className="flex items-center gap-1 text-sm text-background/50 hover:text-primary transition-colors mb-4"
                       type="button"
                     >
