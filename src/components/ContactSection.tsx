@@ -43,7 +43,7 @@ const ContactSection = () => {
             {/* Contact Methods */}
             <div className="space-y-6">
               <motion.a
-                href="mailto:info@uncodesociety.org"
+                href="mailto:info@uncodedsociety.org"
                 className="flex items-center gap-4 group"
                 whileHover={{ x: 8 }}
               >
