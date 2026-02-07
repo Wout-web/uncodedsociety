@@ -46,7 +46,7 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
             transition={{ delay: 0.3 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Uncode Society biedt gratis programmeeronderwijs aan ondervertegenwoordigde gemeenschappen. 
+            Uncoded Society biedt gratis programmeeronderwijs aan ondervertegenwoordigde gemeenschappen. 
             Geen ervaring nodig—breng alleen je nieuwsgierigheid mee.
           </motion.p>
 
