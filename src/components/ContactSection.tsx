@@ -52,7 +52,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">E-mail</p>
-                  <p className="text-foreground font-medium">info@uncodesociety.org</p>
+                  <p className="text-foreground font-medium">info@uncodedsociety.org</p>
                 </div>
               </motion.a>
 
