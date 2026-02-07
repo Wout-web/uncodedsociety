@@ -4,7 +4,7 @@ import { X, ArrowRight, AlertCircle, CheckCircle, ChevronLeft } from 'lucide-rea
 import { Button } from '@/components/ui/button';
 import type { Lesson } from '@/components/LessonsSection';
 import { upcomingLessons } from '@/components/LessonsSection';
-import { supabase } from '@/integrations/supabase/client';
+
 
 interface SignUpModalProps {
   isOpen: boolean;
