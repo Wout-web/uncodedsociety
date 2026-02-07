@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import lessonsIllustration from '@/assets/lessons-illustration.png';
 
 interface Lesson {
   id: string;
@@ -172,77 +173,94 @@ const LessonsSection = ({ onSignUpClick }: LessonsSectionProps) => {
           </p>
         </motion.div>
 
-        {/* Lessons - Left aligned, single column */}
-        <div className="flex flex-col gap-4 max-w-2xl">
-          {upcomingLessons.map((lesson, index) => (
-            <motion.div
-              key={lesson.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="group bg-card rounded-2xl p-5 sm:p-6 border border-border hover:border-primary/30 hover:shadow-[0_8px_40px_hsla(199,89%,48%,0.1)] transition-all duration-300"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <div className="flex-1 min-w-0">
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                      {lesson.language}
-                    </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium border border-border text-muted-foreground">
-                      {lesson.level}
-                    </span>
+        {/* Lessons + Illustration side by side */}
+        <div className="flex gap-12 items-start">
+          {/* Lessons - Left aligned, single column */}
+          <div className="flex flex-col gap-4 max-w-2xl flex-1">
+            {upcomingLessons.map((lesson, index) => (
+              <motion.div
+                key={lesson.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                className="group bg-card rounded-2xl p-5 sm:p-6 border border-border hover:border-primary/30 hover:shadow-[0_8px_40px_hsla(199,89%,48%,0.1)] transition-all duration-300"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                  <div className="flex-1 min-w-0">
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                        {lesson.language}
+                      </span>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium border border-border text-muted-foreground">
+                        {lesson.level}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                      {lesson.title}
+                    </h3>
+
+                    {/* Details */}
+                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5 text-primary" />
+                        <span className="capitalize">{lesson.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-primary" />
+                        <span>{lesson.time}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-primary" />
+                        <span>{lesson.location}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Users className="w-3.5 h-3.5 text-primary" />
+                        <span>{lesson.spotsLeft}/{lesson.capacity} plekken</span>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="font-display text-lg font-bold text-foreground mb-2">
-                    {lesson.title}
-                  </h3>
-
-                  {/* Details */}
-                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-primary" />
-                      <span className="capitalize">{lesson.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5 text-primary" />
-                      <span>{lesson.time}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-primary" />
-                      <span>{lesson.location}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5 text-primary" />
-                      <span>{lesson.spotsLeft}/{lesson.capacity} plekken</span>
-                    </div>
-                  </div>
+                  {/* CTA */}
+                  <Button
+                    variant="hero"
+                    size="lg"
+                    onClick={() => onSignUpClick(lesson)}
+                    className="sm:w-auto w-full shrink-0"
+                  >
+                    Aanmelden
+                  </Button>
                 </div>
+              </motion.div>
+            ))}
 
-                {/* CTA */}
-                <Button
-                  variant="hero"
-                  size="lg"
-                  onClick={() => onSignUpClick(lesson)}
-                  className="sm:w-auto w-full shrink-0"
-                >
-                  Aanmelden
-                </Button>
-              </div>
-            </motion.div>
-          ))}
+            {/* Notice */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.6 }}
+              className="text-sm text-muted-foreground mt-6"
+            >
+              * Alle lessen zijn gratis. Deelnemers moeten 14 jaar of ouder zijn. Laptops worden door ons verzorgd in samenwerking met het Stedelijk Gymnasium Haarlem.
+            </motion.p>
+          </div>
+
+          {/* Illustration - right side, hidden on mobile */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="hidden lg:flex items-center justify-center flex-shrink-0 w-80 xl:w-96 sticky top-32"
+          >
+            <img
+              src={lessonsIllustration}
+              alt="Student programming on a laptop"
+              className="w-full h-auto opacity-90"
+            />
+          </motion.div>
         </div>
-
-        {/* Notice */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.6 }}
-          className="text-sm text-muted-foreground mt-10 max-w-2xl"
-        >
-          * Alle lessen zijn gratis. Deelnemers moeten 14 jaar of ouder zijn. Laptops worden door ons verzorgd in samenwerking met het Stedelijk Gymnasium Haarlem.
-        </motion.p>
       </div>
     </section>
   );
