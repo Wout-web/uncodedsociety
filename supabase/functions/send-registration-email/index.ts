@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log(`New registration: ${fullName} (${age}) - ${email} for ${lessonTitle}`);
 
     const emailResponse = await resend.emails.send({
-      from: "Uncode Society <onboarding@resend.dev>",
+      from: "Uncoded Society <onboarding@resend.dev>",
       to: ["w_draijer08@outlook.com"],
       subject: `Nieuwe Aanmelding: ${fullName} - ${lessonTitle}`,
       html: `
@@ -91,7 +91,7 @@ const handler = async (req: Request): Promise<Response> => {
           </div>
           
           <p style="color: #94a3b8; font-size: 12px; margin-top: 24px; text-align: center;">
-            Dit bericht is automatisch verstuurd via Uncode Society.
+            Dit bericht is automatisch verstuurd via Uncoded Society.
           </p>
         </div>
       `,

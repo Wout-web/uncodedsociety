@@ -35,7 +35,7 @@ const Navbar = ({ onSignUpClick }: NavbarProps) => {
           {/* Text Logo */}
           <a href="#" className="flex items-center gap-1">
             <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-              Uncode
+              Uncoded
             </span>
             <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">
               Society

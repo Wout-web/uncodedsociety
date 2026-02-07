@@ -43,7 +43,7 @@ const ContactSection = () => {
             {/* Contact Methods */}
             <div className="space-y-6">
               <motion.a
-                href="mailto:info@uncodesociety.org"
+                href="mailto:info@uncodedsociety.org"
                 className="flex items-center gap-4 group"
                 whileHover={{ x: 8 }}
               >
@@ -52,12 +52,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">E-mail</p>
-                  <p className="text-foreground font-medium">info@uncodesociety.org</p>
+                  <p className="text-foreground font-medium">info@uncodedsociety.org</p>
                 </div>
               </motion.a>
 
               <motion.a
-                href="https://instagram.com/uncodesociety"
+                href="https://instagram.com/uncodedsociety"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
@@ -68,7 +68,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Instagram</p>
-                  <p className="text-foreground font-medium">@uncodesociety</p>
+                  <p className="text-foreground font-medium">@uncodedsociety</p>
                 </div>
               </motion.a>
 

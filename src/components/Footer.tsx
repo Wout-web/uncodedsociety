@@ -13,7 +13,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <a href="#" className="flex items-center gap-1">
-              <span className="font-display text-lg font-bold text-foreground">Uncode</span>
+              <span className="font-display text-lg font-bold text-foreground">Uncoded</span>
               <span className="font-display text-lg font-bold text-primary">Society</span>
             </a>
           </motion.div>
@@ -24,7 +24,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-sm text-muted-foreground"
           >
-            © {currentYear} Uncode Society — Een non-profit initiatief
+            © {currentYear} Uncoded Society — Een non-profit initiatief
           </motion.p>
         </div>
       </div>
