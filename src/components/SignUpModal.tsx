@@ -75,18 +75,11 @@ const SignUpModal = ({ isOpen, onClose, selectedLesson, onSelectLesson }: SignUp
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke('send-registration-email', {
-        body: {
-          fullName: formData.fullName.trim(),
-          age: parseInt(formData.age),
-          email: formData.email.trim(),
-          lessonTitle: selectedLesson.title,
-          lessonLanguage: selectedLesson.language,
-          lessonLevel: selectedLesson.level,
-        },
-      });
-
-      if (error) throw error;
+      const subject = encodeURIComponent(`Aanmelding: ${formData.fullName.trim()} - ${selectedLesson.title}`);
+      const body = encodeURIComponent(
+        `Nieuwe aanmelding:\n\nNaam: ${formData.fullName.trim()}\nLeeftijd: ${formData.age}\nE-mail: ${formData.email.trim()}\n\nLes: ${selectedLesson.title}\nTaal: ${selectedLesson.language}\nNiveau: ${selectedLesson.level}`
+      );
+      window.location.href = `mailto:w_draijer08@outlook.com?subject=${subject}&body=${body}`;
 
       setIsSuccess(true);
       setTimeout(() => {
