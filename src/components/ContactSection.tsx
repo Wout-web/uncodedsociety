@@ -57,7 +57,7 @@ const ContactSection = () => {
               </motion.a>
 
               <motion.a
-                href="https://instagram.com/uncodesociety"
+                href="https://instagram.com/uncodedsociety"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
