@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import lessonsIllustration from '@/assets/lessons-illustration.png';
-import { Button } from '@/components/ui/button';
 
 interface Lesson {
   id: string;
