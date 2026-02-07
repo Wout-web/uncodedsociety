@@ -41,7 +41,7 @@ const AboutSection = () => {
             className="space-y-6 text-lg text-muted-foreground leading-relaxed"
           >
             <p>
-              <span className="text-foreground font-semibold">Uncode Society</span> is een non-profit 
+              <span className="text-foreground font-semibold">Uncoded Society</span> is een non-profit 
               initiatief dat zich inzet om programmeeronderwijs toegankelijk te maken voor iedereen. 
               Wij geloven dat je achtergrond niet je toekomst in tech mag bepalen.
             </p>

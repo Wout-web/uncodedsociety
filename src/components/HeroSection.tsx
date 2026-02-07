@@ -75,26 +75,6 @@ const HeroSection = ({ onSignUpClick }: HeroSectionProps) => {
             </Button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex gap-8 sm:gap-12 mt-12 sm:mt-16 pt-8 border-t border-border/50"
-          >
-            <div>
-              <p className="text-3xl sm:text-4xl font-display font-bold text-foreground">500+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Studenten</p>
-            </div>
-            <div>
-              <p className="text-3xl sm:text-4xl font-display font-bold text-foreground">3</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Talen</p>
-            </div>
-            <div>
-              <p className="text-3xl sm:text-4xl font-display font-bold text-primary">Gratis</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Altijd & Voor Altijd</p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

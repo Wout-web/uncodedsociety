@@ -68,7 +68,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Instagram</p>
-                  <p className="text-foreground font-medium">@uncodesociety</p>
+                  <p className="text-foreground font-medium">@uncodedsociety</p>
                 </div>
               </motion.a>
 

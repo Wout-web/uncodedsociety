@@ -91,7 +91,7 @@ const handler = async (req: Request): Promise<Response> => {
           </div>
           
           <p style="color: #94a3b8; font-size: 12px; margin-top: 24px; text-align: center;">
-            Dit bericht is automatisch verstuurd via Uncode Society.
+            Dit bericht is automatisch verstuurd via Uncoded Society.
           </p>
         </div>
       `,

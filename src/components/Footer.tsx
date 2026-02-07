@@ -24,7 +24,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-sm text-muted-foreground"
           >
-            © {currentYear} Uncode Society — Een non-profit initiatief
+            © {currentYear} Uncoded Society — Een non-profit initiatief
           </motion.p>
         </div>
       </div>
