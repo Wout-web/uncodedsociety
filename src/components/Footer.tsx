@@ -13,7 +13,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <a href="#" className="flex items-center gap-1">
-              <span className="font-display text-lg font-bold text-foreground">Uncode</span>
+              <span className="font-display text-lg font-bold text-foreground">Uncoded</span>
               <span className="font-display text-lg font-bold text-primary">Society</span>
             </a>
           </motion.div>
